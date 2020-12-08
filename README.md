@@ -34,6 +34,26 @@ npm run android
 ## 그외 컴포넌트(상시 추가)
 1. Platform : android와 ios를 구분지을 때 사용.
 2. StyleSheet : 컴포넌트들의 색상, 정렬, 크기, 높이 등 스타일(디자인)을 담당.
+3. SafeAreaView : 안전한 영역 안에 자동으로 배치해 줌. 아이폰은 노치 아래 부분부터 배치.
+4. TouchableOpacity : 일반 Button은 IOS와 Android에서 다르게 보이기 때문에 해당 컴포넌트를 사용한다.
+
+## State와 Props
+1. State와 Props에 변화가 감지되면 render()가 호출된다. 
+	=> 리액트의 최적화와 관련이 있음(참고: https://yuddomack.tistory.com/1#optimize)
+2. State에는 현재 컴포넌트의 화면을 그리는 것과 관련된 대다수의 값들을 담는다.
+	안드로이드의 preference 자동 느낌.
+3. 데이터의 흐름은 상위 컴포넌트에서 하위 컴포넌트로 단방향임.
+4. Props에는 상위 컴포넌트에서 전달받은 값이 담겨있으면 변경 불가능하다.
+5. Props 혹은 State는 비동기적으로 업데이트 될 수 있다.
+
+### State
+화면을 그리는 것과 관련된 대다수의 값을 갖는다.
+ex1) 환영합니다 고객님. => State 필요 없음. / 환영합니다 OOO 고객님. => State에 이름을 담음.
+ex2) 앱이 실행되고 api로 서버에 글 목록을 요청해서 state에 저장하고 render()되면 글들이 그려짐.
+
+### Props
+커스텀 컴포넌트와 관계가 깊다. 상위 컴포넌트에서 < ~~~ > 라고 넘긴 데이터를 하위 컴포넌트에서
+props.id ~~~ 로 받아서 쓰여짐.
 
 #UI 레이아웃
 ## flex, width, height
