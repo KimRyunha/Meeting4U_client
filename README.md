@@ -59,3 +59,29 @@ props.id ~~~ 로 받아서 쓰여짐.
 ## flex, width, height
 flex : 크기를 다른 view와의 상대적 비율로 설정
 width. height : 크기를 고정 수치 or 퍼센트로 설정
+=> flex와 width, height를 같이 쓰면 고정된 값 이외의 범위를 flex의 비율로 채운다.
+=> 자식의 크기 설정은 부모의 크기에 영향을 받으므로 주의해야 함.
+
+## Flex Direction
+View에서 "자식 요소"들을 가로, 세로로 쌓기 위해 flexDirection을 사용함.
+default는 column.
+### row
+가로 배치에 쓰임.
+### column
+세로 배치에 쓰임.
+
+## Align Items
+0. Flex Direction으로부터 수직한 정렬.
+1. flex-start : 가로 정렬을 기준으로 시작점.
+2. center : 가로 정렬을 기준으로 중앙.
+3. flex-end : 가로 정렬을 기준으로 끝점.
+4. stretch : flex-start부터 flex-end까지 늘려서 채움. 정렬 방향의 크기를 지정해주지 않아야 함.
+5. baseline : ?
+
+## Justify Content
+0. Flex Direction으로부터 수평한(같은방향) 정렬.
+1. flex-start : 가로 정렬을 기준으로 시작점.
+2. center : 가로 정렬을 기준으로 중앙.
+3. flex-end : 가로 정렬을 기준으로 끝점.
+4. space-between : 양쪽 정렬.
+5. space-around : 공백까지 포함한 양쪽 정렬.
