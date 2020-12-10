@@ -3,6 +3,7 @@ import {
 	Platform, SafeAreaView, StyleSheet, 
 	Text, View, Button, TouchableOpacity
 } from 'react-native';
+import CustomButton from './CustomButton';
 
 //type Props : props의 type을 정의해주는 것. 자료형을 제한해줄 때 사용함.
 type Props = {};
@@ -34,7 +35,16 @@ export default class App extends Component<Props> {
 					</View>
 					
 					<View style={styles.footer}> 
-						<Text style={styles.headerText}>footer</Text>
+						<CustomButton 
+							buttonColor={'#0C9EED'}
+							title={'회원가입'}
+							onPress={() => alert("회원가입 버튼")}/>
+						<CustomButton 
+							buttonColor={'#F7B300'}
+							title={'로그인'}
+							titleColor={'#000'}
+							onPress={() => alert("로그인 버튼")}/>
+						<CustomButton />
 					</View>
 				</SafeAreaView>
 			   );
@@ -44,7 +54,7 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
+		padding: 10,
 		backgroundColor: 'black',
 	},
 	headerText: {
@@ -101,7 +111,6 @@ const styles = StyleSheet.create({
 		width:'100%',
 		height:'30%',
 		backgroundColor: 'darkgray',
-		alignItems: "center",
 		justifyContent: "center",
 	},
 });

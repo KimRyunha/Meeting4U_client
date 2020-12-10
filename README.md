@@ -85,3 +85,7 @@ default는 column.
 3. flex-end : 가로 정렬을 기준으로 끝점.
 4. space-between : 양쪽 정렬.
 5. space-around : 공백까지 포함한 양쪽 정렬.
+
+## Custom Button
+OS마다 Native Button이 다르기 때문에 TouchableOpacity 컴포넌트를 사용함.
+이벤트 핸들링이 가능한 커스텀 컴포넌트를 만들 수 있다.
