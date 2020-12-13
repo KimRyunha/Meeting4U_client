@@ -36,7 +36,8 @@ npm run android
 2. StyleSheet : 컴포넌트들의 색상, 정렬, 크기, 높이 등 스타일(디자인)을 담당.
 3. SafeAreaView : 안전한 영역 안에 자동으로 배치해 줌. 아이폰은 노치 아래 부분부터 배치.
 4. TouchableOpacity : 일반 Button은 IOS와 Android에서 다르게 보이기 때문에 해당 컴포넌트를 사용한다.
-
+5. Image : 이미지를 뷰에 넣을 때 사용하는 컴포넌트.
+6. TextInput : 텍스트 입력창.
 ## State와 Props
 1. State와 Props에 변화가 감지되면 render()가 호출된다. 
 	=> 리액트의 최적화와 관련이 있음(참고: https://yuddomack.tistory.com/1#optimize)
@@ -89,3 +90,32 @@ default는 column.
 ## Custom Button
 OS마다 Native Button이 다르기 때문에 TouchableOpacity 컴포넌트를 사용함.
 이벤트 핸들링이 가능한 커스텀 컴포넌트를 만들 수 있다.
+
+
+## Image
+1. 이미지 불러오기
+	- source={{uri: 'image uri'}}
+	- source={require('local image link')}
+2. Image Resizing
+	- option 이름: resizeMode
+	- contain : 넓은 부분이 100%를 차지할 때까지 이미지를 늘림. 이미지 전체가 보임.
+	- cover : 좁은 부분이 100%를 차지할 때까지 이미지를 늘림. 이미지 일부가 확대해서 보임.
+
+# React Navigation
+react native에서 화면 간 이동을 가능하게 해주는 라이브러리
+## 설치 및 코드 참고
+https://hellominchan.tistory.com/4
+https://velog.io/@st2702/React-native-Navigation
+https://eso0609.tistory.com/88
+
+## 종류
+1. Stack : 새로운 화면이 기존 화면 위에 쌓이는 화면(뒤로가기 가능)
+2. Drawer : 화면에 우측으로 미는 제스쳐를 통해 좌측에 열리는 화면
+3. BottomTab : 화면 하단에 아이콘을 통해 경로를 전환
+4. MaterialBottomTab : 머티리얼 디자인을 사용한 BottomTab
+5. MaterialTopTab : 머티리얼 디자인을 사용한 탭 바
+
+## 함수
+1. navigate('Name') : 화면 이동
+2. push('Name') : 기존 화면 위에 새로운 화면을 쌓음.
+3. goBack() : stack에서 하나씩 pop된다.
