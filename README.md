@@ -38,6 +38,7 @@ npm run android
 4. TouchableOpacity : 일반 Button은 IOS와 Android에서 다르게 보이기 때문에 해당 컴포넌트를 사용한다.
 5. Image : 이미지를 뷰에 넣을 때 사용하는 컴포넌트.
 6. TextInput : 텍스트 입력창.
+
 ## State와 Props
 1. State와 Props에 변화가 감지되면 render()가 호출된다. 
 	=> 리액트의 최적화와 관련이 있음(참고: https://yuddomack.tistory.com/1#optimize)
@@ -101,6 +102,15 @@ OS마다 Native Button이 다르기 때문에 TouchableOpacity 컴포넌트를 �
 	- contain : 넓은 부분이 100%를 차지할 때까지 이미지를 늘림. 이미지 전체가 보임.
 	- cover : 좁은 부분이 100%를 차지할 때까지 이미지를 늘림. 이미지 일부가 확대해서 보임.
 
+## TextInput
+텍스트를 입력받을 때 사용하는 컴포넌트(참고: https://lcw126.tistory.com/227)
+1. secureTextEntry={true} : 비밀번호 효과 내기.
+2. placeholder="" : Text Hint 넣기
+3. onChangeText : 콜백 함수 지정하여 매개변수 등 전달 가능.
+4. multiline={true} : 여러 줄 입력 가능
+5. numberOfLines={'num'} : 최소 라인수 설정
+6. maxHeight : 최대 높이 값 설정. 그 이상은 스크롤로 변경됨.
+
 # React Navigation
 react native에서 화면 간 이동을 가능하게 해주는 라이브러리
 ## 설치 및 코드 참고
@@ -119,3 +129,14 @@ https://eso0609.tistory.com/88
 1. navigate('Name') : 화면 이동
 2. push('Name') : 기존 화면 위에 새로운 화면을 쌓음.
 3. goBack() : stack에서 하나씩 pop된다.
+
+# 사용 기능 정리
+유용한 기능 모음
+
+## 빈 공간 터치 이벤트
+참고: https://matthew-jo.tistory.com/15
+TouchableWithoutFeedback을 부모에 감싸주고 onPress() 구현.
+
+## Alert
+참고: https://stackoverflow.com/questions/37468117/how-to-set-alert-box-title-in-react-natives-alert
+Alert 생성. 타이틀, 내용, 버튼들...
