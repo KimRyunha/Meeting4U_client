@@ -55,7 +55,8 @@ export default class LoginScreen extends Component<Props> {
 									'Login',
 									this.state.id_input + "\n" +
 									this.state.pw_input,
-									[{text: 'OK'}, {text: 'Cancel'}]
+									[{text: 'OK', onPress: () => {this.props.navigation.navigate('Home')}},
+									 {text: 'Cancel'}]
 								)
 							}/>
 						<CustomButton

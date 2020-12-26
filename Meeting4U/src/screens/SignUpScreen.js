@@ -80,12 +80,13 @@ export default class LoginScreen extends Component<Props> {
 								this.state.pw_check_input + "\n" +
 								this.state.nickname_input + "\n" +
 								this.state.email_input,
-								[{text: 'OK'}, {text: 'Cancel'}],
-								)}/>
+								[{text: 'OK'}, 
+								{text: 'Cancel'}],
+							)}/>
 					<CustomButton
 						buttonColor={'#5E666E'}
 						title={'취소'}
-						onPress={() => this.props.navigation.navigate('Home')}/>
+						onPress={() => this.props.navigation.navigate('Start')}/>
 					</View>
 				</View>
 				</TouchableWithoutFeedback>
