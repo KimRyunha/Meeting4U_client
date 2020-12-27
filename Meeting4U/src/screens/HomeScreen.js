@@ -5,6 +5,8 @@ import {
 	Image
 } from 'react-native';
 import CustomButton from '../components/CustomButton';
+import MeetingItem from '../components/MeetingItem';
+
 
 //type Props : props의 type을 정의해주는 것. 자료형을 제한해줄 때 사용함.
 type Props = {};
@@ -22,6 +24,9 @@ export default class HomeScreen extends Component<Props> {
 						</Text>
 					</View>
 
+					<MeetingItem> </MeetingItem>
+					<MeetingItem> </MeetingItem>
+					<MeetingItem> </MeetingItem>
 				</View>
             );
 	}
