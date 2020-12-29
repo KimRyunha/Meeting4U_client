@@ -41,6 +41,7 @@ npm run android
 4. TouchableOpacity : 일반 Button은 IOS와 Android에서 다르게 보이기 때문에 해당 컴포넌트를 사용한다.
 5. Image : 이미지를 뷰에 넣을 때 사용하는 컴포넌트.
 6. TextInput : 텍스트 입력창.
+7. FlatList : Listview(참고: https://lcw126.tistory.com/233)
 
 ## State와 Props
 1. State와 Props에 변화가 감지되면 render()가 호출된다. 
