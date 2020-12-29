@@ -25,4 +25,5 @@ Alert 생성. Title, Contents, Button 변경.
 ### 2020-12-27
 Meeting Item Component 생성.
 
-
+### 2020-12-29
+FlatList 이용해서 리스트 생성.
