@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { 
-    Text, StyleSheet, View
+    Text, StyleSheet, View, Alert
 } from 'react-native';
 import CustomButton from '../components/CustomButton';
 
@@ -54,13 +54,29 @@ export default class MeetingItem extends Component {
 
                 <CustomButton
                     style={{width:'15%'}}
-                    buttonColor={'#5B7FC2'}
+                    buttonColor={'#2B3C5C'}
                     title={'초대코드'}
+                    onPress={() => Alert.alert(
+								'초대코드',
+								makeid(),
+								[{text: 'OK'}, 
+								{text: 'Cancel'}],
+							)}
                 />
             </View>
             
         )
     }
+}
+
+function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    for (var i = 0; i < 5; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
 }
 
 const styles = StyleSheet.create({

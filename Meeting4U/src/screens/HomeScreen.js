@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {
 	StyleSheet, 
 	Text, View,
-	Image, FlatList
+	Image, FlatList, TouchableOpacity
 } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import MeetingItem from '../components/MeetingItem';
@@ -38,25 +38,31 @@ export default class HomeScreen extends Component<Props> {
 					<View style={styles.title}> 
 						<Text
 							style={{fontSize:32, fontWeight: 'bold', color:"#000", 
-									marginLeft: 30, marginBottom: 3}}>
-							사용자이름 님
+									marginLeft: 30}}>
+							유정주 님
 						</Text>
-						<View style={{width:"100%",borderTopWidth:1,borderColor:'#000'}} />
 					</View>
+					<View style={{width:"100%",borderTopWidth:1,borderColor:'#000'}} />
 
 					<FlatList
 						data={this.state.data}
 						renderItem={this.renderItem}>
 					</FlatList>
 
-					<View style={styles.footer}>
-						<Image 
-							style={{height:'50%', width:'50%', resizeMode:'contain'}}
-							source={require('Meeting4U/images/home/meeting_add.png')}/>
-						<Text
-							style={{fontSize:15, fontWeight:'bold', paddingTop: 5, color:"#fff"}}>
-							미팅 추가
-						</Text>
+					<View style={styles.footer}>	
+						<TouchableOpacity 
+							style={{flex:1, alignItems: "center", justifyContent: "center", padding: 10}}
+							onPress={() => {this.props.navigation.navigate('CreateMT')}}>
+
+							<Image 
+								style={{flex: 2, resizeMode:'contain'}}
+								source={require('Meeting4U/images/home/meeting_add.png')}/>
+							<Text
+								style={{flex: 1, paddingTop: 5, fontWeight:'bold', color:"#fff"}}>
+								미팅 만들기
+							</Text>
+							
+						</TouchableOpacity>
 					</View>
 					
 				</View>
@@ -85,15 +91,21 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		width:'100%',
-		height:'5%',
+		height:'10%',
 		backgroundColor: '#5B7FC2',
 		alignItems: "center",
+		justifyContent: "center",
+	},
+	header_content: {
+		width:'100%',
+		height:'20%',
+		backgroundColor: '#fff',
 		justifyContent: "center",
 	},
 	title: {
 		width:'100%',
 		height:'8%',
-		justifyContent: "flex-end",
+		justifyContent: "center",
 	},
 	content: {
 		flex: 1, //100 - (10+20+30) 이외의 공간을 1 비율로 채움.
@@ -103,8 +115,9 @@ const styles = StyleSheet.create({
 	footer: {
 		width:'100%',
 		height:'11%',
+		flexDirection: 'row',
 		alignItems: "center",
-		justifyContent: "center",
+		justifyContent: "space-around",
 		backgroundColor: "#5B7FC2",
 		marginTop: 5,
 	},

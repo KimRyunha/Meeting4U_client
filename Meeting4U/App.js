@@ -5,12 +5,14 @@ import StartScreen from './src/screens/StartScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 import HomeScreen from './src/screens/HomeScreen';
+import CreateMtScreen from './src/screens/CreateMtScreen';
+import MapScreen from './src/screens/MapScreen';
 
 const AppNavigator = createStackNavigator ({
   	Start: {
     	screen: StartScreen,
     	navigationOptions: {
-      	headerShown : false
+      		headerShown : false
     	},
   	},
   	Login: {
@@ -27,6 +29,18 @@ const AppNavigator = createStackNavigator ({
 	},
 	Home: {
 		screen: HomeScreen,
+		navigationOptions: {
+			headerShown: false
+		}
+	},
+	CreateMT: {
+		screen: CreateMtScreen,
+		navigationOptions: {
+			headerShown: false
+		}
+	}, 
+	MapScreen: {
+		screen: MapScreen,
 		navigationOptions: {
 			headerShown: false
 		}
