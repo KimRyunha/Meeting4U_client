@@ -148,3 +148,23 @@ TouchableWithoutFeedback을 부모에 감싸주고 onPress() 구현.
 ## Alert
 참고: https://stackoverflow.com/questions/37468117/how-to-set-alert-box-title-in-react-natives-alert
 Alert 생성. 타이틀, 내용, 버튼들...
+
+## Ionicons
+https://github.com/oblador/react-native-vector-icons
+react native에서 사용할 수 있는 유용한 아이콘들(https://ionicons.com/)
+react-native-vector-icons를 설치하고
+1. react-native link react-native-vector-icons 
+2. react-native start --reset-cache
+3. react-native run-ios or run android
+하면 install 된다.
+import Icon from 'react-native-vector-icons/Ionicons'
+
+### Platform별로 속성 다르게 주기
+https://stackoverflow.com/questions/52122061/how-can-i-create-cross-platform-icon-in-react-native
+
+## react-navigation-stack
+https://jeffgukang.github.io/react-native-tutorial/docs/router-tutorial/react-navigation-stack/react-navigation-stack-kr.html
+
+## react-navigation-tab
+https://jeffgukang.github.io/react-native-tutorial/docs/router-tutorial/02-react-navigation-tab/react-navigation-tab-kr.html
+

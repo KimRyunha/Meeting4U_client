@@ -3,10 +3,13 @@ import {
     StyleSheet, Text, View, Image, TextInput, Keyboard,
 	Alert, TouchableWithoutFeedback, TouchableOpacity
 } from 'react-native';
+
 import CustomButton from '../components/CustomButton';
 
 type Props = {};
 export default class CreateMtScreen extends Component<Props> {
+    
+
 	render() {
 		return (
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -24,7 +27,8 @@ export default class CreateMtScreen extends Component<Props> {
                                 onPress={() => {this.props.navigation.navigate('MapScreen')}}>
                                 <TextInput
                                     placeholder='미팅 이름을 입력하세요.'
-                                    style={styles.boxText}/>
+                                    style={{color:"black", width: '85%', padding:5,
+                                            borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
                             </TouchableOpacity>
                         </View>
             
@@ -43,8 +47,12 @@ export default class CreateMtScreen extends Component<Props> {
                                 style={{fontSize:15, width: '20%'}}>날짜</Text>
                             <TouchableOpacity 
                                 style={{flex:1, alignItems: 'space-around'}}>
-                                <Text style={styles.boxText}>
-                                    날짜 선택하기</Text>
+                                <TextInput
+                                    placeholder='날짜를 입력하세요.'
+                                    style={{color:"black", width: '85%', padding:5,
+                                            borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
+                                {/* <Text style={styles.boxText}>
+                                    날짜 선택하기</Text> */}
                             </TouchableOpacity>
                         </View>
 
@@ -52,8 +60,12 @@ export default class CreateMtScreen extends Component<Props> {
                             <Text style={{fontSize:15, width: '20%'}}>시간</Text>
                             <TouchableOpacity 
                                 style={{flex:1, alignItems: 'space-around'}}>
-                                <Text style={styles.boxText}>
-                                    시간 선택하기</Text>
+                                <TextInput
+                                    placeholder='시간을 입력하세요.'
+                                    style={{color:"black", width: '85%', padding:5,
+                                            borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
+                                {/* <Text style={styles.boxText}>
+                                    시간 선택하기</Text> */}
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -64,6 +76,7 @@ export default class CreateMtScreen extends Component<Props> {
                             title={'확인'}
                             onPress={() => Alert.alert(
                                     '미팅 생성',
+                                    "todo: go to detail of Meeting page",
                                     [{text: 'OK'}, 
                                     {text: 'Cancel'}],
                                 )}/>
@@ -113,7 +126,7 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     boxText: {
-        color: '#aaa', 
+        color: '#888',
         width: '85%',
         borderColor: '#aaa',
         borderWidth: 1, 

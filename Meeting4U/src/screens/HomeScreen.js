@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
 import {
 	StyleSheet, 
-	Text, View,
+	Text, View, SafeAreaView,
 	Image, FlatList, TouchableOpacity
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import CustomButton from '../components/CustomButton';
 import MeetingItem from '../components/MeetingItem';
+import HomeMenuItem from '../components/HomeMenuItem';
 
 //type Props : props의 type을 정의해주는 것. 자료형을 제한해줄 때 사용함.
 type Props = {};
@@ -31,7 +34,7 @@ export default class HomeScreen extends Component<Props> {
 
 	render() {
 		return (
-				<View style={styles.container}>
+				<SafeAreaView style={styles.container}>
 					<View style={styles.header}>
 					</View> 
 
@@ -44,28 +47,40 @@ export default class HomeScreen extends Component<Props> {
 					</View>
 					<View style={{width:"100%",borderTopWidth:1,borderColor:'#000'}} />
 
+					<View style={styles.content}>
+						<HomeMenuItem
+							title="미팅 생성"
+							iconName="ios-people"
+							buttonColor="black"
+							onPress={() => {this.props.navigation.navigate('CreateMT')}}/>
+						
+						<HomeMenuItem
+							title="미팅 검색"
+							iconName="ios-search"
+							buttonColor="black"
+							/>
+
+						<HomeMenuItem
+							title="미팅 전체 목록"
+							iconName="list-circle"
+							buttonColor="black"
+							/>
+						
+					</View>
+
+					<View style={{width:"100%",borderTopWidth:1,borderColor:'#000'}} />
+
 					<FlatList
+						style={{flex:1, backgroundColor: 'white'}}
 						data={this.state.data}
 						renderItem={this.renderItem}>
 					</FlatList>
 
 					<View style={styles.footer}>	
-						<TouchableOpacity 
-							style={{flex:1, alignItems: "center", justifyContent: "center", padding: 10}}
-							onPress={() => {this.props.navigation.navigate('CreateMT')}}>
-
-							<Image 
-								style={{flex: 2, resizeMode:'contain'}}
-								source={require('Meeting4U/images/home/meeting_add.png')}/>
-							<Text
-								style={{flex: 1, paddingTop: 5, fontWeight:'bold', color:"#fff"}}>
-								미팅 만들기
-							</Text>
-							
-						</TouchableOpacity>
+						
 					</View>
 					
-				</View>
+				</SafeAreaView>
 		);
 	}
 
@@ -79,7 +94,7 @@ export default class HomeScreen extends Component<Props> {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#fff',
+		backgroundColor: '#5B7FC2',
 	},
 	headerText: {
 		color: "#fff",
@@ -91,7 +106,7 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		width:'100%',
-		height:'10%',
+		height:'3%',
 		backgroundColor: '#5B7FC2',
 		alignItems: "center",
 		justifyContent: "center",
@@ -106,18 +121,18 @@ const styles = StyleSheet.create({
 		width:'100%',
 		height:'8%',
 		justifyContent: "center",
+		backgroundColor: 'white'
 	},
 	content: {
-		flex: 1, //100 - (10+20+30) 이외의 공간을 1 비율로 채움.
-		alignItems: "center",
-		//justifyContent: "center",
-	},
-	footer: {
-		width:'100%',
-		height:'11%',
+		flex: 0.2, //100 - (10+20+30) 이외의 공간을 1 비율로 채움.
 		flexDirection: 'row',
 		alignItems: "center",
 		justifyContent: "space-around",
+		backgroundColor: "#fff",
+	},
+	footer: {
+		width:'100%',
+		height:'3%',
 		backgroundColor: "#5B7FC2",
 		marginTop: 5,
 	},
