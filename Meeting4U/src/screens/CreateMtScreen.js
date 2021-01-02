@@ -42,31 +42,54 @@ export default class CreateMtScreen extends Component<Props> {
                             </TouchableOpacity>
                         </View>
 
-                        <View style={styles.boxStyle}>
+                        <View 
+                            style={{height: '20%', flexDirection: 'column'}}>
                             <Text 
-                                style={{fontSize:15, width: '20%'}}>날짜</Text>
-                            <TouchableOpacity 
-                                style={{flex:1, alignItems: 'space-around'}}>
+                                style={{fontSize:15}}>날짜</Text>
+                            
+                            <View 
+                                style={{flex:1, flexDirection: 'row', alignItems: 'center'}}>
+                        
                                 <TextInput
-                                    placeholder='날짜를 입력하세요.'
-                                    style={{color:"black", width: '85%', padding:5,
+                                    style={{color:"black", width: '20%', padding:5,
                                             borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
-                                {/* <Text style={styles.boxText}>
-                                    날짜 선택하기</Text> */}
-                            </TouchableOpacity>
+                                <Text style={{color:'black', margin:10}}>
+                                    년</Text>
+
+                                <TextInput
+                                    style={{color:"black", width: '20%', padding:5,
+                                            borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
+                                <Text style={{color:'black', margin:10}}>
+                                    월</Text>
+
+                                <TextInput
+                                    style={{color:"black", width: '20%', padding:5,
+                                            borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
+                                <Text style={{color:'black', margin:10}}>
+                                    일</Text>
+                            </View>
                         </View>
 
-                        <View style={styles.boxStyle}>
-                            <Text style={{fontSize:15, width: '20%'}}>시간</Text>
-                            <TouchableOpacity 
-                                style={{flex:1, alignItems: 'space-around'}}>
+                        <View 
+                            style={{height: '20%', flexDirection: 'column'}}>
+                            <Text 
+                                style={{fontSize:15}}>시간</Text>
+                            
+                            <View 
+                                style={{flex:1, flexDirection: 'row', alignItems: 'center'}}>
+                        
                                 <TextInput
-                                    placeholder='시간을 입력하세요.'
-                                    style={{color:"black", width: '85%', padding:5,
+                                    style={{color:"black", width: '20%', padding:5,
                                             borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
-                                {/* <Text style={styles.boxText}>
-                                    시간 선택하기</Text> */}
-                            </TouchableOpacity>
+                                <Text style={{color:'black', margin:10}}>
+                                    시</Text>
+
+                                <TextInput
+                                    style={{color:"black", width: '20%', padding:5,
+                                            borderColor: '#aaa', borderWidth: 1, borderRadius: 5}}/>
+                                <Text style={{color:'black', margin:10}}>
+                                    분</Text>
+                            </View>
                         </View>
                     </View>
 
@@ -77,7 +100,7 @@ export default class CreateMtScreen extends Component<Props> {
                             onPress={() => Alert.alert(
                                     '미팅 생성',
                                     "todo: go to detail of Meeting page",
-                                    [{text: 'OK'}, 
+                                    [{text: 'OK', onPress : () => {this.props.navigation.replace('MtDetails')}}, 
                                     {text: 'Cancel'}],
                                 )}/>
                         <CustomButton

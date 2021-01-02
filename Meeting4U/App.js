@@ -13,6 +13,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import CreateMtScreen from './src/screens/CreateMtScreen';
 import MapScreen from './src/screens/MapScreen';
 import SettingScreen from './src/screens/SettingScreen';
+import MtDetailsScreen from './src/screens/MtDetailsScreen';
 
 const HomeTabNavigator = createBottomTabNavigator (
 	{
@@ -91,6 +92,12 @@ const AppNavigator = createStackNavigator (
 		},
 		MapScreen: {
 			screen: MapScreen,
+			navigationOptions: {
+				headerShown: false
+			}
+		},
+		MtDetails: {
+			screen: MtDetailsScreen,
 			navigationOptions: {
 				headerShown: false
 			}

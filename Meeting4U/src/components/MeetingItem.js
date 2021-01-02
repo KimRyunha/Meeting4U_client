@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { 
-    Text, StyleSheet, View, Alert
+    Text, StyleSheet, View, Alert, TouchableOpacity
 } from 'react-native';
 import CustomButton from '../components/CustomButton';
 
-export default class MeetingItem extends Component {
+type Props = {};
+export default class MeetingItem extends Component<Props> {
     static defaultProps = {
         title: 'Meeting Name',
         date: '2020-12-31',
@@ -24,32 +25,37 @@ export default class MeetingItem extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{flex:3, flexDirection: 'column'}}>
-                    <View style={styles.item}>
-                        <Text 
-                            ellipsizeMode = 'tail'
-                            numberOfLines = { 1 }
-                            style={styles.title}
-                        >미팅이름</Text>
-                        <View style={{height:"100%",borderLeftWidth:0.3,borderColor:'#444'}} />
-                        <Text 
-                            style={styles.contents}
-                        >2020-12-31 14:30</Text>
-                    </View>
-                    <View style={styles.item}>
-                        <Text
-                            ellipsizeMode = 'tail'
-                            numberOfLines = { 1 }
-                            style={styles.title}
-                        >미팅장소</Text>
-                        <View style={{height:"100%",borderLeftWidth:0.3,borderColor:'#444'}} />
-                        
-                        <Text
-                            ellipsizeMode = 'tail'
-                            numberOfLines = { 1 } 
-                            style={styles.contents}
-                        >장리더, 유대원, 김대원</Text>
-                    </View>
+                <View 
+                    style={{flex:3, flexDirection: 'column'}}>
+                    <TouchableOpacity 
+                        style={{flex:3}}
+                        onPress={this.props.onPress}>
+                        <View style={styles.item}>
+                            <Text 
+                                ellipsizeMode = 'tail'
+                                numberOfLines = { 1 }
+                                style={styles.title}
+                            >미팅이름</Text>
+                            <View style={{height:"100%",borderLeftWidth:0.3,borderColor:'#444'}} />
+                            <Text 
+                                style={styles.contents}
+                            >2020-12-31 14:30</Text>
+                        </View>
+                        <View style={styles.item}>
+                            <Text
+                                ellipsizeMode = 'tail'
+                                numberOfLines = { 1 }
+                                style={styles.title}
+                            >미팅장소</Text>
+                            <View style={{height:"100%",borderLeftWidth:0.3,borderColor:'#444'}} />
+                            
+                            <Text
+                                ellipsizeMode = 'tail'
+                                numberOfLines = { 1 } 
+                                style={styles.contents}
+                            >장리더, 유대원, 김대원</Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
 
                 <CustomButton

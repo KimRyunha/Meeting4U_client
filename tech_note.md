@@ -165,6 +165,13 @@ https://stackoverflow.com/questions/52122061/how-can-i-create-cross-platform-ico
 ## react-navigation-stack
 https://jeffgukang.github.io/react-native-tutorial/docs/router-tutorial/react-navigation-stack/react-navigation-stack-kr.html
 
+### push 
+스택을 쌓으면서 화면 전환
+### navigate
+일반 화면 전환
+### replace
+화면 바꾸기(뒤로가기 시에 안 보임)
+
 ## react-navigation-tab
 https://jeffgukang.github.io/react-native-tutorial/docs/router-tutorial/02-react-navigation-tab/react-navigation-tab-kr.html
 

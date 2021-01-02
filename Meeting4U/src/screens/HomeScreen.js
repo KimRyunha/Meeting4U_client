@@ -17,6 +17,7 @@ export default class HomeScreen extends Component<Props> {
 		super();
 		//화면 자동갱신되는 멤버변수
 		this.state={
+		//미팅 개수만큼...
 		data:[
 				{key:"0", data:"0"},
 				{key:"1", data:"1"},
@@ -86,7 +87,8 @@ export default class HomeScreen extends Component<Props> {
 
 	renderItem=({item})=>{
 		return(
-			<MeetingItem></MeetingItem>
+			<MeetingItem
+				onPress={() => {this.props.navigation.navigate('MtDetails')}}></MeetingItem>
 		);
 	}
 }

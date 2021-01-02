@@ -6,6 +6,7 @@ import SignUpScreen from './SignUpScreen';
 import HomeScreen from './HomeScreen';
 import CreateMtScreen from './CreateMtScreen';
 import MapScreen from './MapScreen';
+import MtDetailsScreen from './MtDetailsScreen';
 
 export function registerScreens() {
   Navigation.registerComponent('meeting4u.StartScreen', () => StartScreen);
@@ -14,4 +15,5 @@ export function registerScreens() {
   Navigation.registerComponent('meeting4u.HomeScreen', () => HomeScreen);
   Navigation.registerComponent('meeting4u.CreateMtScreen', () => CreateMtScreen);
   Navigation.registerComponent('meeting4u.MapScreen', () => MapScreen);
+  Navigation.registerComponent('metting4u.MtDetailsScreen', () => MtDetailsScreen);
 }
