@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -21,7 +21,7 @@ const HomeTabNavigator = createBottomTabNavigator (
 			screen: HomeScreen,
 			navigationOptions: {
 				headerShown: false
-			}
+			},
 		}, 
 		Setting: {
 			screen: SettingScreen,
@@ -54,13 +54,9 @@ const HomeTabNavigator = createBottomTabNavigator (
 			},
 		}),
 		tabBarOption: {
-			activeTintColor: 'white',
+			activeTintColor: '#E6826E',
 			inactiveTintColor: 'gray',
-			style: {
-				backgroundColor: 'black',
-			},
 		},
-
 	}
 );
 
@@ -78,11 +74,17 @@ const AppNavigator = createStackNavigator (
 				headerShown: false
 			}
 		},
+		SignUp: {
+			screen: SignUpScreen,
+			navigationOptions: {
+				headerShown: false
+			}
+		},
 		HomeTabNavigator: {
 			screen: HomeTabNavigator,
 			navigationOptions: {
 				headerShown: false
-			}
+			},
 		},
 		CreateMT: {
 			screen: CreateMtScreen,

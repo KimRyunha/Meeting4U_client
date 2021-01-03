@@ -96,7 +96,7 @@ export default class HomeScreen extends Component<Props> {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#5B7FC2',
+		backgroundColor: '#EABFB6',
 	},
 	headerText: {
 		color: "#fff",
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
 	header: {
 		width:'100%',
 		height:'3%',
-		backgroundColor: '#5B7FC2',
+		backgroundColor: '#EABFB6',
 		alignItems: "center",
 		justifyContent: "center",
 	},
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
 	footer: {
 		width:'100%',
 		height:'3%',
-		backgroundColor: "#5B7FC2",
+		backgroundColor: "#EABFB6",
 		marginTop: 5,
 	},
 });

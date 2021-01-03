@@ -95,7 +95,7 @@ export default class CreateMtScreen extends Component<Props> {
 
                     <View style={styles.footer}>
                         <CustomButton
-                            buttonColor={'#374D76'}
+                            buttonColor={'#2E2524'}
                             title={'확인'}
                             onPress={() => Alert.alert(
                                     '미팅 생성',

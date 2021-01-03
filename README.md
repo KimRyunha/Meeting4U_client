@@ -43,3 +43,8 @@ FlatList 이용해서 리스트 생성.
 - 미팅 리스트 아이템 클릭하면 미팅 세부내용 페이지로 이동하도록 수정.
 - MtDetails, Login Screen 뒤로가기 하면 안 보이게 수정(replace).
 - CustomButton Component에 아이콘 기능 추가.
+
+### 2021-01-02
+- 회원가입 시 이름 입력창 추가.
+- StartScreen 레이아웃, 색상 변경
+- LoginScreen 삭제.

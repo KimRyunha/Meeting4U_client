@@ -60,7 +60,7 @@ export default class MeetingItem extends Component<Props> {
 
                 <CustomButton
                     style={{width:'15%'}}
-                    buttonColor={'#2B3C5C'}
+                    buttonColor={'#2E2524'}
                     title={'초대코드'}
                     onPress={() => Alert.alert(
 								'초대코드',

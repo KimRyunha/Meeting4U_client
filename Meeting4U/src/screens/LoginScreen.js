@@ -50,6 +50,7 @@ export default class LoginScreen extends Component<Props> {
 					<View style={styles.footer}>
 						<CustomButton
 							buttonColor={'#374D76'}
+							flex={1.2}
 							title={'확인'}
 							onPress={() => Alert.alert(
 									'Login',
@@ -61,6 +62,7 @@ export default class LoginScreen extends Component<Props> {
 							}/>
 						<CustomButton
 							buttonColor={'#5E666E'}
+							flex={1.2}
 							title={'취소'}
 							onPress={() => this.props.navigation.goBack()}/>
 						</View>
