@@ -138,6 +138,16 @@ https://eso0609.tistory.com/88
 2. push('Name') : 기존 화면 위에 새로운 화면을 쌓음.
 3. goBack() : stack에서 하나씩 pop된다.
 
+# Redux
+- 개념 참고 : https://velopert.com/3528
+- Store에 값의 요청, 업데이트 등을 해주는 함수
+    - subscribe : 값의 업데이트가 이루어지면 알림
+    - dispatch : 업데이트 요청.
+    - listener : 상태가 바뀌면 subscribe한 곳에 알려줌. 이때 컴포넌트 리렌더링.
+
+- Action : Store에 일어날 액션.
+
+
 # 사용 기능 정리
 유용한 기능 모음
 
