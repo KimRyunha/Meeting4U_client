@@ -48,3 +48,7 @@ FlatList 이용해서 리스트 생성.
 - 회원가입 시 이름 입력창 추가.
 - StartScreen 레이아웃, 색상 변경
 - LoginScreen 삭제.
+
+### 2021-01-10
+- React Native -> Swift로 변경
+- Swift 기초 학습
