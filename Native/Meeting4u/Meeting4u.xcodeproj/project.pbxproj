@@ -15,6 +15,8 @@
 		E7A79E1A25AC6CF000EEC40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A79E1825AC6CF000EEC40E /* LaunchScreen.storyboard */; };
 		E7A79E2325AC79EB00EEC40E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2225AC79EB00EEC40E /* LoginScreen.swift */; };
 		E7A79E2725AF2F0A00EEC40E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2625AF2F0A00EEC40E /* HomeScreen.swift */; };
+		E7A79E2925B294EA00EEC40E /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2825B294EA00EEC40E /* SignupScreen.swift */; };
+		E7A79E2B25B701A100EEC40E /* MtCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2A25B701A100EEC40E /* MtCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E7A79E1B25AC6CF000EEC40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A79E2225AC79EB00EEC40E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E7A79E2625AF2F0A00EEC40E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E7A79E2825B294EA00EEC40E /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
+		E7A79E2A25B701A100EEC40E /* MtCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MtCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				E7A79E0D25AC6CED00EEC40E /* AppDelegate.swift */,
 				E7A79E0F25AC6CED00EEC40E /* SceneDelegate.swift */,
 				E7A79E1125AC6CED00EEC40E /* ContentView.swift */,
+				E7A79E2A25B701A100EEC40E /* MtCard.swift */,
 				E7A79E1325AC6CF000EEC40E /* Assets.xcassets */,
 				E7A79E1825AC6CF000EEC40E /* LaunchScreen.storyboard */,
 				E7A79E1B25AC6CF000EEC40E /* Info.plist */,
@@ -85,6 +90,7 @@
 			children = (
 				E7A79E2225AC79EB00EEC40E /* LoginScreen.swift */,
 				E7A79E2625AF2F0A00EEC40E /* HomeScreen.swift */,
+				E7A79E2825B294EA00EEC40E /* SignupScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -161,8 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A79E0E25AC6CED00EEC40E /* AppDelegate.swift in Sources */,
+				E7A79E2925B294EA00EEC40E /* SignupScreen.swift in Sources */,
 				E7A79E2725AF2F0A00EEC40E /* HomeScreen.swift in Sources */,
 				E7A79E2325AC79EB00EEC40E /* LoginScreen.swift in Sources */,
+				E7A79E2B25B701A100EEC40E /* MtCard.swift in Sources */,
 				E7A79E1025AC6CED00EEC40E /* SceneDelegate.swift in Sources */,
 				E7A79E1225AC6CED00EEC40E /* ContentView.swift in Sources */,
 			);

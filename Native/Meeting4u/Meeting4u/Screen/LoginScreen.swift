@@ -9,16 +9,9 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @State var id: String = ""
     @State var pw: String = ""
-    @State var pw_ck: String = ""
-    @State var name: String = ""
-    @State var homeAddress: String = ""
     @State var email: String = ""
-    @State var phoneNumber: String = ""
-
-    @State private var isSignup: Bool = false
-    @State private var isSignuping: Bool = false
+    @State private var isOn: Bool = true
     
     var body: some View {
         NavigationView {
@@ -32,17 +25,17 @@ struct LoginScreen: View {
                 
                 Spacer()
                 
-                VStack {
+                VStack(alignment: .trailing) {
                     HStack {
-                        Text("아이디")
+                        Text("이메일")
                             .foregroundColor(Color.black)
                             .fontWeight(.bold)
                         
                         Spacer()
                         
-                        TextField("", text: $id)
+                        TextField("", text: $email)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 180)
+                            .frame(width: 250)
                     } // HStack
                         .padding(.horizontal, 20)
                         .padding(.top, 30)
@@ -57,90 +50,12 @@ struct LoginScreen: View {
                         
                         SecureField("", text: $pw)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 180)
+                            .frame(width: 250)
                     } // HStack
                         .padding(.horizontal,20)
-                        .padding(.bottom, self.isSignup ? 0 : 30)
+                        .padding(.bottom, 30)
                         .background(Color.white)
                     
-                    if self.isSignup {
-                        HStack {
-                            Text("비밀번호 확인")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            
-                            Spacer()
-                            
-                            SecureField("", text: $pw_ck)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .frame(width: 180)
-
-                        } // HStack
-                            .padding(.horizontal,20)
-                            .background(Color.white)
-                        
-                        HStack {
-                            Text("이름")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            
-                            Spacer()
-                            
-                            TextField("", text: $name)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .frame(width: 180)
-
-                        } // HStack
-                            .padding(.horizontal,20)
-                            .background(Color.white)
-                        
-                        HStack {
-                            Text("이메일")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            
-                            Spacer()
-                            
-                            TextField("", text: $email)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .keyboardType(.emailAddress)
-                                .frame(width: 180)
-
-                        } // HStack
-                            .padding(.horizontal,20)
-                            .background(Color.white)
-                        
-                        HStack {
-                            Text("전화번호")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            
-                            Spacer()
-                            
-                            TextField("", text: $phoneNumber)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .keyboardType(.numberPad)
-                                .frame(width: 180)
-
-                        } // HStack
-                            .padding(.horizontal,20)
-                            .background(Color.white)
-                        
-                        HStack {
-                            Text("주소")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            
-                            Spacer()
-                            
-                            SecureField("", text: $homeAddress)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .frame(width: 180)
-                        } // HStack
-                            .padding(.horizontal,20)
-                            .padding(.bottom, 30)
-                            .background(Color.white)
-                    }
                 } //VStack
                     .background(Color.white)
                     .cornerRadius(20)
@@ -148,28 +63,20 @@ struct LoginScreen: View {
                 
                 HStack(alignment: .center) {
                     Spacer()
-                    NavigationLink(destination: Text("로그인")) {
-                        Text("로그인")
-                            .frame(width: 80, height: 10, alignment: .center)
-                            .font(.system(size: 20))
-                            .padding(15)
-                            .background(Color("dark_color"))
-                            .foregroundColor(Color.white)
-                            .cornerRadius(10)
-                    }
                     
-                    Button(action: {
-                        withAnimation {
-                            self.isSignup.toggle()
-                        }
-                    }) {
-                        Text(self.isSignup ? "완료" : "회원가입")
-                        .frame(width: 80, height: 10, alignment: .center)
-                        .font(.system(size: 20))
-                        .padding(15)
-                        .background(self.isSignup ? Color.blue : Color.gray)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
+                    Toggle(isOn: $isOn) {
+                        Text("자동 로그인")
+                    } .frame(width:140)
+                        .padding(.trailing, 30)
+                    
+                    Text("계정 찾기")
+                                .padding(.horizontal, 10)
+                                .foregroundColor(Color.blue)
+                    
+                    NavigationLink(destination: SignupScreen()) {
+                        Text("회원가입")
+                            .padding(.horizontal, 10)
+                            .foregroundColor(Color.blue)
                     }
                     
                     Spacer()
@@ -177,6 +84,22 @@ struct LoginScreen: View {
 
                 Spacer()
                 Spacer()
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: HomeScreen()) {
+                        Text("로그인")
+                            .frame(width: 280, height: 20, alignment: .center)
+                            .font(.system(size: 20))
+                            .padding(15)
+                            .background(Color("dark_color"))
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                    }
+                    Spacer()
+                }.padding(.bottom, 50)
+                
             } //Out VStack
             .background(Color("main_color"))
             .edgesIgnoringSafeArea(.all)
