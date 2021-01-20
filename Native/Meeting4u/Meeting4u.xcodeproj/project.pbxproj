@@ -17,6 +17,10 @@
 		E7A79E2725AF2F0A00EEC40E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2625AF2F0A00EEC40E /* HomeScreen.swift */; };
 		E7A79E2925B294EA00EEC40E /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2825B294EA00EEC40E /* SignupScreen.swift */; };
 		E7A79E2B25B701A100EEC40E /* MtCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E2A25B701A100EEC40E /* MtCard.swift */; };
+		E7CA5F8425B851E1004682AD /* CreateMtScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA5F8325B851E1004682AD /* CreateMtScreen.swift */; };
+		E7CA5F8725B8579D004682AD /* DetailMtScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA5F8625B8579D004682AD /* DetailMtScreen.swift */; };
+		E7CA5F8B25B85AD0004682AD /* GestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA5F8A25B85AD0004682AD /* GestureController.swift */; };
+		E7CA5F9525B86232004682AD /* MtPeopleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA5F9425B86232004682AD /* MtPeopleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E7A79E2625AF2F0A00EEC40E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E7A79E2825B294EA00EEC40E /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
 		E7A79E2A25B701A100EEC40E /* MtCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MtCard.swift; sourceTree = "<group>"; };
+		E7CA5F8325B851E1004682AD /* CreateMtScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMtScreen.swift; sourceTree = "<group>"; };
+		E7CA5F8625B8579D004682AD /* DetailMtScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMtScreen.swift; sourceTree = "<group>"; };
+		E7CA5F8A25B85AD0004682AD /* GestureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureController.swift; sourceTree = "<group>"; };
+		E7CA5F9425B86232004682AD /* MtPeopleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MtPeopleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +72,12 @@
 		E7A79E0C25AC6CED00EEC40E /* Meeting4u */ = {
 			isa = PBXGroup;
 			children = (
+				E7CA5F8E25B8613F004682AD /* Item */,
+				E7CA5F8925B85AAC004682AD /* Controller */,
 				E7A79E2125AC79D400EEC40E /* Screen */,
 				E7A79E0D25AC6CED00EEC40E /* AppDelegate.swift */,
 				E7A79E0F25AC6CED00EEC40E /* SceneDelegate.swift */,
 				E7A79E1125AC6CED00EEC40E /* ContentView.swift */,
-				E7A79E2A25B701A100EEC40E /* MtCard.swift */,
 				E7A79E1325AC6CF000EEC40E /* Assets.xcassets */,
 				E7A79E1825AC6CF000EEC40E /* LaunchScreen.storyboard */,
 				E7A79E1B25AC6CF000EEC40E /* Info.plist */,
@@ -91,8 +100,27 @@
 				E7A79E2225AC79EB00EEC40E /* LoginScreen.swift */,
 				E7A79E2625AF2F0A00EEC40E /* HomeScreen.swift */,
 				E7A79E2825B294EA00EEC40E /* SignupScreen.swift */,
+				E7CA5F8325B851E1004682AD /* CreateMtScreen.swift */,
+				E7CA5F8625B8579D004682AD /* DetailMtScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		E7CA5F8925B85AAC004682AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7CA5F8A25B85AD0004682AD /* GestureController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7CA5F8E25B8613F004682AD /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				E7A79E2A25B701A100EEC40E /* MtCard.swift */,
+				E7CA5F9425B86232004682AD /* MtPeopleCard.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +198,12 @@
 				E7A79E2925B294EA00EEC40E /* SignupScreen.swift in Sources */,
 				E7A79E2725AF2F0A00EEC40E /* HomeScreen.swift in Sources */,
 				E7A79E2325AC79EB00EEC40E /* LoginScreen.swift in Sources */,
+				E7CA5F8725B8579D004682AD /* DetailMtScreen.swift in Sources */,
+				E7CA5F8B25B85AD0004682AD /* GestureController.swift in Sources */,
+				E7CA5F8425B851E1004682AD /* CreateMtScreen.swift in Sources */,
 				E7A79E2B25B701A100EEC40E /* MtCard.swift in Sources */,
 				E7A79E1025AC6CED00EEC40E /* SceneDelegate.swift in Sources */,
+				E7CA5F9525B86232004682AD /* MtPeopleCard.swift in Sources */,
 				E7A79E1225AC6CED00EEC40E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

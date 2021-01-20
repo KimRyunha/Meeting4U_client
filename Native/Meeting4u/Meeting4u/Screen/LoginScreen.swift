@@ -30,6 +30,7 @@ struct LoginScreen: View {
                         Text("이메일")
                             .foregroundColor(Color.black)
                             .fontWeight(.bold)
+                            .frame(width:80, alignment: .leading)
                         
                         Spacer()
                         
@@ -45,6 +46,7 @@ struct LoginScreen: View {
                         Text("비밀번호")
                             .foregroundColor(Color.black)
                             .fontWeight(.bold)
+                            .frame(width:80, alignment: .leading)
                         
                         Spacer()
                         
@@ -103,6 +105,9 @@ struct LoginScreen: View {
             } //Out VStack
             .background(Color("main_color"))
             .edgesIgnoringSafeArea(.all)
+            .onTapGesture {
+                endTextEditing()
+            }
             
             
         } //NavigationView

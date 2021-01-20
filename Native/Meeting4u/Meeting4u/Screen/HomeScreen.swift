@@ -17,27 +17,14 @@ struct HomeScreen: View {
                     .font(.system(size: 40))
                     .fontWeight(.bold)
                     .padding(.leading, 25)
-                    .padding(.top, 50)
+                    .padding(.top, 60)
             }
             
-            Rectangle().frame(height:2)
-            
-            ScrollView {
-                VStack {
-                    MtCard()
-                    MtCard()
-                    MtCard()
-                    MtCard()
-                    MtCard()
-                    MtCard()
-                    MtCard()
-                    MtCard()
-                }.padding()
-            }
+            Rectangle().frame(height:2).foregroundColor(.white)
             
             HStack {
                 Spacer()
-                NavigationLink(destination: Text("미팅생성")) {
+                NavigationLink(destination: CreateMtScreen()) {
                     VStack {
                         Image(systemName: "heart.circle.fill")
                             .resizable()
@@ -74,10 +61,26 @@ struct HomeScreen: View {
 
                 Spacer()
             }
-            .padding(.vertical, 20)
+            .padding(.vertical, 5)
             .background(Color.white)
             
+            Rectangle().frame(height:2).foregroundColor(.white)
+            
+            ScrollView {
+                VStack {
+                    MtCard()
+                    MtCard()
+                    MtCard()
+                    MtCard()
+                    MtCard()
+                    MtCard()
+                    MtCard()
+                    MtCard()
+                }.padding()
+            }
+            
         }
+        .background(Color("main_color"))
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.all)
     }

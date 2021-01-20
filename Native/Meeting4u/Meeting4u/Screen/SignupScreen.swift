@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct SignupScreen: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @GestureState private var dragOffset = CGSize.zero
+
     @State var id: String = ""
     @State var pw: String = ""
     @State var pw_ck: String = ""
@@ -134,28 +135,19 @@ struct SignupScreen: View {
                 
                 HStack(alignment: .center) {
                     Spacer()
-                    NavigationLink(destination: HomeScreen()) {
-                        Text("완료")
-                            .frame(width: 80, height: 10, alignment: .center)
-                            .font(.system(size: 20))
-                            .padding(15)
-                            .background(Color("dark_color"))
-                            .foregroundColor(Color.white)
-                            .cornerRadius(10)
-                    }
                     
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("취소")
-                        .frame(width: 80, height: 10, alignment: .center)
-                        .font(.system(size: 20))
-                        .padding(15)
-                            .background(Color.gray)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
-                    }
-                
+                        self.mode.wrappedValue.dismiss()
+                    }, label: {
+                            Text("완료")
+                                .frame(width: 80, height: 10, alignment: .center)
+                                .font(.system(size: 20))
+                                .padding(15)
+                                .background(Color("dark_color"))
+                                .foregroundColor(Color.white)
+                                .cornerRadius(10)
+                        
+                    })
                     
                     Spacer()
                 }
@@ -166,12 +158,18 @@ struct SignupScreen: View {
             } //Out VStack
             .background(Color("main_color"))
             .edgesIgnoringSafeArea(.all)
-            .navigationBarBackButtonHidden(true)
-            
             
         } //NavigationView
         .navigationBarBackButtonHidden(true)
-            
+        .onTapGesture {
+            endTextEditing()
+        }
+        .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
+            if(value.startLocation.x < 20 && value.translation.width > 100) {
+                self.mode.wrappedValue.dismiss()
+            }
+        }))
+        
     }
 }
 
