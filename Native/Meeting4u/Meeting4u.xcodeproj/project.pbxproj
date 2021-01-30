@@ -23,6 +23,19 @@
 		E7CA5F9525B86232004682AD /* MtPeopleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA5F9425B86232004682AD /* MtPeopleCard.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E70E38F025C5294F004057AA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E7A79E0A25AC6CED00EEC40E /* Meeting4u.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meeting4u.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A79E0D25AC6CED00EEC40E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +146,7 @@
 				E7A79E0625AC6CED00EEC40E /* Sources */,
 				E7A79E0725AC6CED00EEC40E /* Frameworks */,
 				E7A79E0825AC6CED00EEC40E /* Resources */,
+				E70E38F025C5294F004057AA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

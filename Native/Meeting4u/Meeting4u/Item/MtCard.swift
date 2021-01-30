@@ -9,33 +9,35 @@
 import SwiftUI
 
 struct MtCard: View {
+    @State var title:String = "타이틀"
+    @State var date:String = "2021-01-01"
+    @State var time:String = "19:30"
+    @State var inviteCode:String = "JJ0216"
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Rectangle().frame(height:0)
             
             HStack {
-                NavigationLink(destination: DetailMtScreen()) {
+                NavigationLink(destination: DetailMtScreen(title:self.title, inviteCode: self.inviteCode, date: self.date, time: self.time)) {
                     VStack(alignment: .leading) {
-                        Text("완식의 매직쇼")
+                        Text(title)
                             .font(.system(size:28))
                             .foregroundColor(Color.black)
-                            .fontWeight(.black)
+                            .fontWeight(.bold)
                             .padding(.bottom, 3)
                             .lineLimit(1)
                             .truncationMode(.tail)
                         
-                        
-                        Text("2021년 1월 31일")
+                        Text(date)
                             .foregroundColor(.secondary)
-                        Text("19시 30분")
+                        Text(time)
                             .foregroundColor(.secondary)
-                        
                     }
                     
                     Spacer()
                 }
                 
-                Text("초대코드")
+                Text(self.inviteCode)
                     .fontWeight(.bold)
                     .frame(width: 70)
                     .foregroundColor(.white)
