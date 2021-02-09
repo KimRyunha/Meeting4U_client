@@ -7,9 +7,12 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct DetailMtScreen: View {
+    var latitude: Double = 0
+    var longitude: Double = 0
+    var placemark: String = "place"
+    
     var title:String = "Title"
     var inviteCode:String = "Code"
     var date:String = "date"
@@ -23,7 +26,7 @@ struct DetailMtScreen: View {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     //지도자리
-                    MapView().frame(height:250)
+                    MapView(lat: latitude, lon: longitude, place: placemark).frame(height:250)
                     
                     HStack {
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -103,33 +106,6 @@ struct DetailMtScreen: View {
         } else {
             // Fallback on earlier versions
         }
-    }
-}
-
-struct MapView: UIViewRepresentable {
-    typealias NSViewType = MKMapView
-    
-    // 1.
-    func makeUIView(context: UIViewRepresentableContext<MapView>) -> MKMapView {
-        MKMapView(frame: .zero)
-    }
-    
-    // 2.
-    func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
-        // 3.
-        let location = CLLocationCoordinate2D(latitude: 37.49618911824551,
-            longitude: 126.95784233254878)
-        // 4.
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: location, span: span)
-        uiView.setRegion(region, animated: true)
-        
-        // 5.
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "Hi"
-        annotation.subtitle = "MT4u"
-        uiView.addAnnotation(annotation)
     }
 }
 

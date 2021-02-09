@@ -13,12 +13,16 @@ struct MtCard: View {
     @State var date:String = "2021-01-01"
     @State var time:String = "19:30"
     @State var inviteCode:String = "JJ0216"
+    @State var lat:Double = 0
+    @State var lon:Double = 0
+    @State var place:String = "xxx"
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Rectangle().frame(height:0)
             
             HStack {
-                NavigationLink(destination: DetailMtScreen(title:self.title, inviteCode: self.inviteCode, date: self.date, time: self.time)) {
+                NavigationLink(destination: DetailMtScreen(latitude: self.lat, longitude: self.lon, placemark: self.place, title:self.title, inviteCode: self.inviteCode, date: self.date, time: self.time)) {
                     VStack(alignment: .leading) {
                         Text(title)
                             .font(.system(size:28))

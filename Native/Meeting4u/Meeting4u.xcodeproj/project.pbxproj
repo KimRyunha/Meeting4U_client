@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70E38F525CABA60004057AA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70E38F425CABA60004057AA /* MapView.swift */; };
+		E70E38F725CABD75004057AA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70E38F625CABD75004057AA /* LocationManager.swift */; };
 		E7A79E0E25AC6CED00EEC40E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E0D25AC6CED00EEC40E /* AppDelegate.swift */; };
 		E7A79E1025AC6CED00EEC40E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E0F25AC6CED00EEC40E /* SceneDelegate.swift */; };
 		E7A79E1225AC6CED00EEC40E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A79E1125AC6CED00EEC40E /* ContentView.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E70E38F425CABA60004057AA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E70E38F625CABD75004057AA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E7A79E0A25AC6CED00EEC40E /* Meeting4u.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meeting4u.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A79E0D25AC6CED00EEC40E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7A79E0F25AC6CED00EEC40E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				E7A79E1825AC6CF000EEC40E /* LaunchScreen.storyboard */,
 				E7A79E1B25AC6CF000EEC40E /* Info.plist */,
 				E7A79E1525AC6CF000EEC40E /* Preview Content */,
+				E70E38F425CABA60004057AA /* MapView.swift */,
+				E70E38F625CABD75004057AA /* LocationManager.swift */,
 			);
 			path = Meeting4u;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A79E0E25AC6CED00EEC40E /* AppDelegate.swift in Sources */,
+				E70E38F525CABA60004057AA /* MapView.swift in Sources */,
 				E7A79E2925B294EA00EEC40E /* SignupScreen.swift in Sources */,
 				E7A79E2725AF2F0A00EEC40E /* HomeScreen.swift in Sources */,
 				E7A79E2325AC79EB00EEC40E /* LoginScreen.swift in Sources */,
@@ -219,6 +226,7 @@
 				E7A79E1025AC6CED00EEC40E /* SceneDelegate.swift in Sources */,
 				E7CA5F9525B86232004682AD /* MtPeopleCard.swift in Sources */,
 				E7A79E1225AC6CED00EEC40E /* ContentView.swift in Sources */,
+				E70E38F725CABD75004057AA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
