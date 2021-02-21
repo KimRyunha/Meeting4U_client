@@ -5,6 +5,27 @@ https://ovenapp.io/view/yfu8QZHi22vjijgxROD8VmK5jB2YY8iY/
 # 사용 기능 및 속성
 tech_note.md 참고
 
+## feature branch 생성 및 종료
+
+<pre><code>
+$ git checkout -b feature/login develop
+
+
+/* 새로운 기능에 대한 작업 수행 */
+/* feature 브랜치에서 모든 작업이 끝나면 */
+
+$ git checkout develop
+$ git merge --no-ff feature/login
+$ git branch -d feature/login
+$ git push origin develop
+</code></pre>
+
+* --no--off
+  새로운 커밋 객체를 만들어 ‘develop’ 브랜치에 merge 한다.
+  이것은 ‘feature’ 브랜치에 존재하는 커밋 이력을 모두 합쳐서 하나의 새로운 커밋 객체를 만들어 ‘develop’ 브랜치로 병합(merge)하는 것이다.
+
+[출처](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)
+
 # 구현 일지
 ### 2020-12-08
 React Native 개념 공부. 레이아웃 연습.
