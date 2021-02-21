@@ -10,7 +10,6 @@ tech_note.md 참고
 <pre><code>
 $ git checkout -b feature/login develop
 
-
 /* 새로운 기능에 대한 작업 수행 */
 /* feature 브랜치에서 모든 작업이 끝나면 */
 
